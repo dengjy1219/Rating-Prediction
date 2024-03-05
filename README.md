@@ -3,40 +3,40 @@ Analyze the Yelp dataset to predict star ratings, provide businesses with strate
 
 Data Source: https://www.yelp.com/dataset
 
-# Definition & Scope of Features
+## Definition & Scope of Features
 
-## Overview
+### Overview
 - **73 Features Considered**
 - **5 Dataset for Analysis**
 
-## Main Categories for Features:
+### Main Categories for Features:
 
-### Business:
+#### Business:
 - **8** Key Points
   - Service options (Takeout, caters)
   - Dining experience (ambience, outdoor seating)
   - Presence of amenities (e.g., TV, Wi-Fi, parking)
 
-### Review:
+#### Review:
 - Sentiment scores
 - Frequency of positive/negative words
 - Length of review
 
-### User Engagement:
+#### User Engagement:
 - Number of reviews received
 - Average stars given by user
 - Number of friends
 - Elite status duration
 
-### Temporal Data:
+#### Temporal Data:
 - Check-in times
 - Frequency of reviews over time
 - Temporal patterns in user activity
 - Tips information
 
-# Data Exploration and Modeling Framework
+## Data Exploration and Modeling Framework
 
-## Data Sets Overview
+### Data Sets Overview
 
 - **5 Data Sets:** Business, User, Review, Check-in, Tips
 - **150,346 businesses** - Location, ratings, attributes
@@ -45,9 +45,9 @@ Data Source: https://www.yelp.com/dataset
 - **908,915 tips** - User tips with text and compliment
 - **131,930 check-ins** - User check-ins at business
 
-## Data Exploration
+### Data Exploration
 
-### Data Description
+#### Data Description
 
 - **Primary Unit**
   - Businesses: Evaluated through ratings, categories, and attributes.
@@ -55,24 +55,24 @@ Data Source: https://www.yelp.com/dataset
 - **Secondary Unit**
   - Reviews: Insights on customer satisfaction and feedback.
 
-### Limitation & Delimitation
+#### Limitation & Delimitation
 
 - **Subjectivity:** Check-in and tips, being subjective, might introduce bias in understanding business quality so we didn’t incorporate in feature engineering.
 - **Focus Area:** Analysis centers on user interactions, review and business-related metrics.
 
-### Feature Engineering
+#### Feature Engineering
 
 - **Text Features:** Identify significant words or phrases (TF-IDF).
 - **Truncated SVD:** Avoid sparse matrix issue since user compliment/feedback/fans have a lot zeros.
 - **One-Hot Encoding:** Each category value is converted into a new column and assigned a 1 or 0 (notation for true/false) value to the column.
 
-### Validation
+#### Validation
 
 - **Cross Validation:** Employ cross-validation techniques to ensure model reliability across different subsets of data.
 
-## Methodology
+### Methodology
 
-### Model Descriptions
+#### Model Descriptions
 
 - **Baseline:** Linear Regression
 - **Non-Linear:**
